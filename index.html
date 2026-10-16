@@ -79,11 +79,9 @@
 
   <main id="main">
     <section class="hero">
-      <div class="wrap hero__grid">
-        <div class="hero__sign">
-          <img src="img/logo.png" width="900" height="900" alt="Логотип гостиницы «Изумруд»: белый бриллиант на зелёном поле" fetchpriority="high">
-        </div>
-        <div>
+      <img class="hero__photo" src="img/scene-hero.jpg" width="1280" height="720" alt="Макет для сайта: гостиница вечером и стоянка перед ней" fetchpriority="high">
+      <div class="hero__veil"></div>
+      <div class="wrap hero__copy">
           <p class="eyebrow">село Изумрудное · круглосуточно</p>
           <h1>Гостиница «Изумруд»</h1>
           <p class="lede">Проживание в Джанкойском районе Крыма. Большая стоянка для легковых и грузовых машин и для спецтехники. Для фур-длинномеров — собственная стоянка недалеко.</p>
@@ -109,7 +107,6 @@
               <dd>руб. за сутки</dd>
             </div>
           </dl>
-        </div>
       </div>
     </section>
 
@@ -139,6 +136,7 @@
           </div>
           <p>Гости выбирают «Изумруд» из‑за стоянки: она рассчитана не только на легковые машины. Число мест в документах гостиницы не указано.</p>
         </div>
+        <div class="place">
         <div class="board">
           <article>
             <span class="num">01</span>
@@ -161,6 +159,10 @@
             <p>Собственная стоянка для длинномеров расположена недалеко от гостиницы.</p>
           </article>
         </div>
+        <figure class="place__photo">
+          <img src="img/scene-parking-sm.jpg" srcset="img/scene-parking-sm.jpg 900w, img/scene-parking.jpg 1280w" sizes="(max-width: 900px) 100vw, 42vw" width="1280" height="720" alt="Макет для сайта: стоянка с легковыми и фурой" loading="lazy" decoding="async">
+        </figure>
+        </div>
       </div>
     </section>
 
@@ -169,18 +171,18 @@
         <div class="section__head">
           <div>
             <p class="kicker">02 — номера</p>
-            <h2>Фотографии гостиницы</h2>
+            <h2>Как это может выглядеть</h2>
           </div>
-          <p>Снимки с прежнего сайта. Размеры кроватей и цена — в <a href="rooms.html">прейскуранте на 2026 год</a>, а не «на глаз» по фото.</p>
+          <p>Фасад, стоянка и светлые номера ниже — макеты для вёрстки, не фотографии вашего здания. Рядом оставлены реальные снимки с прежнего сайта. Цены и размеры кроватей — в <a href="rooms.html">прейскуранте на 2026 год</a>.</p>
         </div>
         <div class="mosaic">
           <figure class="mosaic__main">
-            <img src="img/room-desk-sm.jpg" srcset="img/room-desk-sm.jpg 800w, img/room-desk.jpg 1024w" sizes="(max-width: 760px) 100vw, 50vw" width="1024" height="682" alt="Номер гостиницы: телевизор, кондиционер, электрочайник и рабочий стол" loading="lazy" decoding="async">
-            <figcaption>Телевизор, кондиционер и чайник входят в цену номера</figcaption>
+            <img src="img/scene-room-sm.jpg" srcset="img/scene-room-sm.jpg 900w, img/scene-room.jpg 1152w" sizes="(max-width: 760px) 100vw, 50vw" width="1152" height="864" alt="Макет номера: кровать, телевизор, кондиционер и чайник" loading="lazy" decoding="async">
+            <figcaption>Макет номера</figcaption>
           </figure>
           <figure>
-            <img src="img/room-suite-sm.jpg" srcset="img/room-suite-sm.jpg 800w, img/room-suite.jpg 1024w" sizes="(max-width: 760px) 100vw, 25vw" width="1024" height="682" alt="Двухкомнатный номер: вид через дверной проём во вторую комнату" loading="lazy" decoding="async">
-            <figcaption>Двухкомнатный номер</figcaption>
+            <img src="img/scene-twin-sm.jpg" srcset="img/scene-twin-sm.jpg 900w, img/scene-twin.jpg 1152w" sizes="(max-width: 760px) 100vw, 25vw" width="1152" height="864" alt="Макет номера с двумя кроватями" loading="lazy" decoding="async">
+            <figcaption>Макет: две кровати</figcaption>
           </figure>
           <figure>
             <img src="img/room-twin-sm.jpg" srcset="img/room-twin-sm.jpg 800w, img/room-twin.jpg 1024w" sizes="(max-width: 760px) 100vw, 25vw" width="1024" height="682" alt="Номер с двумя кроватями, столом и телевизором" loading="lazy" decoding="async">
@@ -310,6 +312,20 @@
             <p>Наличные по чеку, карта «Мир», QR-код СБП или безналичный расчёт.</p>
           </article>
         </div>
+      </div>
+    </section>
+
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            <p class="kicker">07 — карта</p>
+            <h2>Село Изумрудное</h2>
+          </div>
+          <p>ул. Свободная, 31. Точка на Яндекс Картах — карточка гостиницы.</p>
+        </div>
+        <iframe class="map" title="Гостиница «Изумруд» на Яндекс Карте" loading="lazy" src="https://yandex.ru/map-widget/v1/?ll=34.412126%2C45.736267&amp;z=16&amp;oid=33616187913&amp;ol=biz"></iframe>
+        <p class="note" style="margin-top:12px"><a href="https://yandex.com/maps/-/CXBh54PQ" rel="noopener">Открыть в Яндекс Картах</a></p>
       </div>
     </section>
   </main>
