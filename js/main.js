@@ -89,6 +89,26 @@
     });
   }
 
+  var motionOk = !window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (motionOk && "IntersectionObserver" in window) {
+    document.documentElement.classList.add("motion");
+    var nodes = document.querySelectorAll(
+      ".section__head, .board article, .quotes article, .mosaic figure, .gallery-row figure, .panel, .steps article, .page-intro h1, .page-intro .lede, .price-table, .requisites, .form, .map"
+    );
+    nodes.forEach(function (el, index) {
+      el.classList.add("reveal");
+      el.style.setProperty("--d", (index % 5) * 70 + "ms");
+    });
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.18, rootMargin: "0px 0px -6% 0px" });
+    nodes.forEach(function (el) { observer.observe(el); });
+  }
+
   var form = document.getElementById("request-form");
   if (!form) return;
 
