@@ -109,6 +109,22 @@
     nodes.forEach(function (el) { observer.observe(el); });
   }
 
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = lightbox ? lightbox.querySelector("img") : null;
+  document.querySelectorAll(".gallery__item").forEach(function (button) {
+    button.addEventListener("click", function () {
+      if (!lightbox || !lightboxImg) return;
+      lightboxImg.src = button.getAttribute("data-full");
+      lightboxImg.alt = button.getAttribute("data-alt") || "";
+      if (typeof lightbox.showModal === "function") lightbox.showModal();
+    });
+  });
+  if (lightbox) {
+    lightbox.addEventListener("click", function (event) {
+      if (event.target === lightbox || event.target.closest("[data-close]")) lightbox.close();
+    });
+  }
+
   var form = document.getElementById("request-form");
   if (!form) return;
 
