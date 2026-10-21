@@ -80,10 +80,12 @@
 }
 
 :root {
-  --green: #0a9d34;
-  --green-ink: #065a24;
-  --ink: #08140f;
-  --ink-2: #143026;
+  --green: #2f9a52;
+  --green-ink: #2a7a45;
+  --heading: #246b3e;
+  --ink: #3d5c4c;
+  --deep: #1c3d2e;
+  --ink-2: #2f5644;
   --paper: #f3efe6;
   --paper-2: #e6e0d2;
   --cream: #f7f4ee;
@@ -252,7 +254,7 @@ a:hover { color: var(--ink); }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 78% center;
+  object-position: center 62%;
   animation: drift 22s ease-out both;
 }
 
@@ -310,11 +312,12 @@ h1, h2, h3 {
   letter-spacing: -0.035em;
   line-height: 1.02;
   margin: 0;
+  color: var(--heading);
 }
 
 h1 { font-size: clamp(2.7rem, 6vw, 5.4rem); }
 
-.hero h1 { max-width: 8em; }
+.hero h1 { max-width: 8em; color: var(--cream); }
 
 .lede {
   font-size: 1.15rem;
@@ -536,7 +539,7 @@ h1 { font-size: clamp(2.7rem, 6vw, 5.4rem); }
 }
 
 .price-table th {
-  background: var(--ink);
+  background: var(--deep);
   color: var(--cream);
   font-weight: 500;
   font-size: 0.92rem;
@@ -582,7 +585,7 @@ h1 { font-size: clamp(2.7rem, 6vw, 5.4rem); }
 .panel li + li, .prose li + li { margin-top: 6px; }
 
 .band {
-  background: var(--ink);
+  background: var(--deep);
   color: var(--cream);
 }
 
@@ -615,12 +618,12 @@ h1 { font-size: clamp(2.7rem, 6vw, 5.4rem); }
 }
 
 .page-intro {
-  background: var(--ink);
+  background: var(--deep);
   color: var(--cream);
   padding: 42px 0 48px;
 }
 
-.page-intro h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); max-width: 14ch; }
+.page-intro h1 { font-size: clamp(2.4rem, 5vw, 4.4rem); max-width: 14ch; color: var(--cream); }
 
 .crumbs { margin: 0 0 16px; font-size: 0.92rem; color: #b7c4bb; }
 
@@ -729,7 +732,7 @@ h1 { font-size: clamp(2.7rem, 6vw, 5.4rem); }
   transition: transform 0.7s ease;
 }
 
-.gallery--wide .gallery__item img { object-position: center 70%; }
+.gallery--panorama .gallery__item img { aspect-ratio: 21 / 10; }
 
 .gallery__item:hover img { transform: scale(1.04); }
 
@@ -852,14 +855,21 @@ h1 { font-size: clamp(2.7rem, 6vw, 5.4rem); }
   gap: 10px;
 }
 
-.gallery-row figure { margin: 0; }
+.kitchen-photo { margin: 0; }
+
+.kitchen-photo img {
+  width: 100%;
+  aspect-ratio: 21 / 10;
+  object-fit: cover;
+  object-position: center;
+}
 
 .gallery-row img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
 
 .gallery-row figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 6px; }
 
 .site-footer {
-  background: var(--ink);
+  background: var(--deep);
   color: #c5d0c9;
   padding: 48px 0 28px;
 }
@@ -985,7 +995,7 @@ h1 { font-size: clamp(2.7rem, 6vw, 5.4rem); }
     padding: 28px 0 108px;
     align-items: flex-end;
   }
-  .hero__photo { object-position: 70% 40%; }
+  .hero__photo { object-position: center 68%; }
   .hero__veil {
     background: linear-gradient(180deg, rgba(3, 10, 8, 0.15) 0%, rgba(3, 10, 8, 0.55) 42%, rgba(3, 10, 8, 0.9) 100%);
   }
